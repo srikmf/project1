@@ -7,6 +7,7 @@ import numpy as np
 
 
 app = Flask(__name__) # initializing a flask app
+#app = Flask(__name__,template_folder='./frontend/templates',static_folder='./frontend/static')
 # app=application
 @app.route('/',methods=['GET'])  # route to display the home page
 @cross_origin()
