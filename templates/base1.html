@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>House Price Prediction</title>
+
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+     <link rel="stylesheet" type= "text/css" href="{{ url_for('static', filename='css/style.css') }}">
+     <link rel="icon" href="data:;base64,=">
+    <link rel="icon" href="data:;base64,iVBORw0KGgo=">
+  
+</head>
+
+<body>
+ <div class="form">
+	<h1>House Price Predictior</h1>
+
+     <!-- Form to enter new data for predictions  -->
+    <form action="/predict" method="POST">
+        <input type="number" name="CRIM" placeholder="CRIM" required="required" min="0" value="0" step="any" /><br>
+    	<input type="number" name="ZN" placeholder="ZN" required="required" min="0" value="0" step="any" /><br>
+        <input type="number" name="INDUS" placeholder="INDUS	" required="required" min="0" value="0" step="any" /><br>
+        <input type="number" name="CHAS" placeholder="CHAS" required="required" min="0" value="0" step="any" /><br>
+	    <input type="number" name="NOX" placeholder="NOX" required="required" min="0" value="0" step="any" /><br>
+    	<input type="number" name="RM" placeholder="RM" required="required" min="0" value="0" step="any" /><br>
+        <input type="number" name="AGE" placeholder="AGE	" required="required" min="0" value="0" step="any" /><br>
+        <input type="number" name="DIS" placeholder="DIS" required="required" min="0" value="0" step="any" /><br>
+	    <input type="number" name="RAD" placeholder="RAD" required="required" min="0" value="0" step="any" /><br>
+    	<input type="number" name="TAX" placeholder="TAX" required="required" min="0" value="0" step="any" /><br>
+        <input type="number" name="PTRATIO" placeholder="PTRATIO " required="required" min="0" value="0" step="any"/><br>
+        <input type="number" name="B" placeholder="B" required="required" min="0" value="0" step="any"/><br>
+	    <input type="number" name="LSTAT" placeholder="LSTAT" required="required" min="0" value="0" step="any" /><br>
+	
+
+
+        <input type="submit" value="Predict">
+    </form>
+
+   <br>
+   <br>
+  <footer>
+      {{pred}}
+  <p style="font-family:verdana">All Prices Predicted are in $1000.</p>
+
+
+</footer>
+   
+ </div>
+
+</body>
+</html>
